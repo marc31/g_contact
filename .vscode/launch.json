@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "TS Node",
+            "type": "node",
+            "request": "launch",
+            "env": {},
+            "args": ["./src/index.ts"],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector"
+        },
+        {
+            "name": "Forever",
+            "type": "node",
+            "request": "attach",
+            "sourceMaps": true,
+            "restart": true,
+            "port": 9229,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector"
+        }
+    ]
+}
